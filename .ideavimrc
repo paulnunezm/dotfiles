@@ -73,7 +73,9 @@ nmap <leader><leader> :action RecentFiles<CR>
 " tab nav
 nmap <S-l> :action NextSplitter<CR>
 nmap <S-h> :action PrevSplitter<CR>
-nmap <leader>us :action Unsplit<CR>
+
+" Close ta[B]s that are n[O]t selected
+nmap <leader>bo :action Unsplit<CR>
 
 "[S]earch [A]ction
 nmap <leader>sa :action GotoAction<CR>
