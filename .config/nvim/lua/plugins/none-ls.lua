@@ -1,0 +1,26 @@
+return {}
+-- ===========
+--
+-- lazy is now using conform nvim. Will try to see how it works
+-- ===========
+
+-- return {
+--     "nvimtools/none-ls.nvim",
+--     config = function()
+--         local null_ls = require("null-ls")
+--
+--         null_ls.setup({
+--             sources = {
+--                 --               null_ls.builtins.formatting.stylua,
+--                 null_ls.builtins.formatting.prettier,
+--                 null_ls.builtins.formatting.swiftformat, -- installed via hombrew,
+--
+--                 -- null_ls.builtins.diagnostics.swiftlint, -- installed via hombrew
+--                 --                null_ls.builtins.diagnostics.eslint_d,
+--                 --   null_ls.builtins.diagnostics.swiftlint,
+--             },
+--         })
+--
+--         vim.keymap.set("n", "<leader>rf", vim.lsp.buf.format, {})
+--     end,
+-- }

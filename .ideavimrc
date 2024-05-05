@@ -1,0 +1,108 @@
+"" Source your .vimrc
+source ~/.vimrc
+
+""" Common settings -----------------------------------------------------------
+let mapleader=" "
+
+set ideajoin
+set easymotion
+set NERDTree
+
+set showmode
+set highlightedyank
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" Map \r to the Reformat Code action
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+
+""" MY MAPPINGS ----------------------------------------------------------------
+"[V]im [R]eload [M]appings
+nmap <leader>vrm :action IdeaVim.ReloadVimRc.reload<CR>
+
+""" RUN ACTIONS ----------------------------------------------------------------
+nmap <leader>rb <Action>(RebuildGradleProject)
+nmap <leader>rc :action RunConfiguration<CR>
+nmap <leader>ra :action AvailableDevices<CR>
+
+""" EDITOR ---------------------------------------------------------------------
+
+" [R]e[N]ame
+map <leader>rn <Action>(RenameElement)
+
+" [R]e[F]ormat
+map <leader>rf <Action>(ReformatCode)
+
+" [G]it [A]nnotate
+map <leader>ga <Action>(Annotate)
+
+" [S]et [D]istraction [F]ree mode
+map <leader>sdf <Action>(ToggleDistractionFreeMode)
+
+" [C]hange [TH]eme
+map <leader>cth <Action>(ChangeLaf)
+
+" [S]how [D]iagnostics. To keep it like nVim"
+map <leader>sd <Action>(ActivateProblemsViewmoolWindow)
+
+" show [TO]-DO window"
+nmap <leader>to :action ActivateTODOToolWindow<CR>
+
+"" NAVIGATION -----------------------------------------------------------------
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
+nmap [m <Action>(MethodUp)
+nmap ]m <Action>(MethodDown)
+nmap ]c :action JumpToNextChange<CR>
+nmap [c :action JumpToLastChange<CR>
+nmap <leader>su <Action>(ShowUsages)
+nmap <leader>fu <Action>(FindUsages)
+nmap <leader>fs <Action>(FileStructurePopup)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader><leader> :action RecentFiles<CR>
+
+" tab nav
+nmap <S-l> :action NextSplitter<CR>
+nmap <S-h> :action PrevSplitter<CR>
+nmap <leader>us :action Unsplit<CR>
+
+"[S]earch [A]ction
+nmap <leader>sa :action GotoAction<CR>
+
+"[S]earch [F]ile
+nmap <leader>sf :action GotoFile<CR>
+
+"[S]earch [C]lass
+nmap <leader>sc :action GotoClass<CR>
+
+""" EASYMOTION -----------------------------------------------------------------
+" Move to word
+map <leader>w <Plug>(easymotion-bd-w)
+
+" Incremental search
+map / <Plug>(easymotion-s)
+
+""" IDEAVIM HARPOON ------------------------------------------------------------
+map <leader>hs <action>(ShowHarpoon)
+map <leader>ha <action>(AddToHarpoon)
+map <leader>1 <action>(GotoHarpoon1)
+map <leader>2 <action>(GotoHarpoon2)
+map <leader>3 <action>(GotoHarpoon3)
+map <leader>4 <action>(GotoHarpoon4)
+map <leader>5 <action>(GotoHarpoon5)
+map <leader>h1 <action>(SetHarpoon1)
+map <leader>h2 <action>(SetHarpoon2)
+map <leader>h3 <action>(SetHarpoon3)
+map <leader>h4 <action>(SetHarpoon4)
+map <leader>h5 <action>(SetHarpoon5)
+
+nmap <leader>e :NERDTreeToggle<CR>
