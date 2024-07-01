@@ -57,6 +57,11 @@ map <leader>sd <Action>(ActivateProblemsViewmoolWindow)
 " show [TO]-DO window"
 nmap <leader>to :action ActivateTODOToolWindow<CR>
 
+" [F]ont Increase [=]
+nmap <leader>f= :action EditorIncreaseFontSizeGlobal<CR>
+" [F]ont Decrease [-]
+nmap <leader>f- :action EditorDecreaseFontSizeGlobal<CR>
+
 "" NAVIGATION -----------------------------------------------------------------
 nmap ]e <Action>(GotoNextError)
 nmap [e <Action>(GotoPreviousError)
