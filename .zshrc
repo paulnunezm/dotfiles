@@ -1,4 +1,4 @@
-# Tokio night color theme
+# Tokio night color theme for FZF 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
 --color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
@@ -19,6 +19,7 @@ alias gw="./gradlew"
 alias dtkt="./gradlew detekt"
 alias dtktb="./gradlew detektBaseline"
 
+# git aliases with fzf 
 alias gitco="git branch \
   | fzf --height=15 --border='rounded' \
   | xargs git checkout"
@@ -36,10 +37,11 @@ alias gitbd="git branch \
 # ssh config
 eval $(ssh-agent)
 
-
 plugins=(git zsh-autosuggestions adb zsh-syntax-highlighting)
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Setup fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # zoxided: like cd but ovepowered
 eval "$(zoxide init zsh)"
