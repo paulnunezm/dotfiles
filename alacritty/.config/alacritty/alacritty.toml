@@ -1,0 +1,28 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "Buttonless"
+
+[font]
+size = 18.0
+
+[font.bold]
+family = "UbuntuSansMono Nerd Font Mono"
+style = "SemiBold"
+
+[font.bold_italic]
+family = "UbuntuSansMono Nerd Font Mono"
+style = "SemiBoldItalic"
+
+[font.italic]
+family = "UbuntuSansMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "UbuntuSansMono Nerd Font Mono"
+style = "Regular"

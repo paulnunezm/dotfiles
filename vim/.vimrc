@@ -1,7 +1,7 @@
 syntax on
+
 set mouse=a
 set relativenumber number
-" set cursorline
 set shiftwidth=4 "Set the indent size to four spaces
 set tabstop=4 "Set the tab size to four space
 set softtabstop=4

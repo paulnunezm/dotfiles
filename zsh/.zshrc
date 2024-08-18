@@ -1,3 +1,5 @@
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 # Tokio night color theme for FZF 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
@@ -5,13 +7,10 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
 --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 
-alias zshconfig="vim ~/.zshrc"
-
-# dotfiles config repo alias
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias zshconfig="nvim ~/.zshrc"
 
 # default command remaps 
-alias ls="exa --icons"
+alias ls="eza --icons"
 alias cd="z"
 
 # Android dev aliases
@@ -47,3 +46,4 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
+

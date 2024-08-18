@@ -1,5 +1,6 @@
-This uses the a bare repository to host the dotfiles.
+This uses gnu Stow to manage the dotfiles.
 
-Explanatino can be found:
-- https://www.atlassian.com/git/tutorials/dotfiles
-- https://news.ycombinator.com/item?id=11070797
+The dotfiles directory should be place in the `~` directory.
+
+## > [!NOTE]
+> ideavimrc 
