@@ -1,8 +1,8 @@
 [colors.primary]
-background = "#1E1E2E"
+#background = "#1E1E2E"
 foreground = "#CDD6F4"
-dim_foreground = "#CDD6F4"
-bright_foreground = "#CDD6F4"
+#dim_foreground = "#CDD6F4"
+#bright_foreground = "#CDD6F4"
 
 [colors.cursor]
 text = "#1E1E2E"
@@ -14,23 +14,23 @@ cursor = "#B4BEFE"
 
 [colors.search.matches]
 foreground = "#1E1E2E"
-background = "#A6ADC8"
+# background = "#A6ADC8"
 
 [colors.search.focused_match]
 foreground = "#1E1E2E"
-background = "#A6E3A1"
+#background = "#A6E3A1"
 
 [colors.footer_bar]
 foreground = "#1E1E2E"
-background = "#A6ADC8"
+#background = "#A6ADC8"
 
 [colors.hints.start]
 foreground = "#1E1E2E"
-background = "#F9E2AF"
+#background = "#F9E2AF"
 
 [colors.hints.end]
 foreground = "#1E1E2E"
-background = "#A6ADC8"
+#background = "#A6ADC8"
 
 [colors.selection]
 text = "#1E1E2E"

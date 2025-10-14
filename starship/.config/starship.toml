@@ -9,17 +9,20 @@ $directory\
 [](fg:peach bg:green)\
 $git_branch\
 $git_status\
-[](fg:green bg:teal)\
+[](fg:green bg:purple)\
 $golang\
-$nodejs\
 $kotlin\
 $python\
-[](fg:teal bg:blue)\
+[](fg:purple bg:blue)\
 $docker_context\
-[](fg:blue bg:purple)\
-$time\
-[ ](fg:purple)\
+ [ ](fg:blue)\ 
 $line_break$character"""
+
+# $nodejs\
+# $php\
+# after docker_context
+# $time\
+# [ ](fg:purple)\
 
 palette = 'catppuccin_mocha'
 
@@ -68,25 +71,7 @@ disabled = false
 style = "bg:surface0 fg:text"
 
 [os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = ""
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
+Macos = "󰌽"
 
 [username]
 show_always = true
@@ -106,6 +91,7 @@ truncation_symbol = "…/"
 "Music" = "󰝚 "
 "Pictures" = " "
 "Developer" = "󰲋 "
+"Work" = "󰲋  Work"
 
 [git_branch]
 symbol = ""
@@ -115,21 +101,32 @@ format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
 [git_status]
 style = "bg:teal"
 format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
+conflicted = '🏳'
+#ahead = '🏎💨'
+#behind = '😰'
+diverged = '😵'
+up_to_date = ' ✓'
+untracked = '🤷'
+#stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = 'rn'
+deleted = '🗑'
 
 [nodejs]
 symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
-[c]
-symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+# [c]
+# symbol = " "
+# style = "bg:teal"
+# format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+#
+# [rust]
+# symbol = ""
+# style = "bg:teal"
+# format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
 [golang]
 symbol = ""
@@ -142,20 +139,19 @@ style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:color_fg0 bg:teal)]($style)'
 
 [java]
-symbol = " "
-style = "bg:teal"
-format = '[[ $symbol ](fg:color_fg0 bg:teal)]($style)'
-#format = '[[ $symbol( $version) ](fg:color_fg0 bg:teal)]($style)'
+symbol = ""                                        #""
+style = "bg:black"
+format = '[[ $symbol ](fg:text bg:purple)]($style)'
 
 [kotlin]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:teal)]($style)'
+style = "bg:black"
+format = '[[ $symbol ](fg:text bg:purple)]($style)'
 
-[haskell]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:teal)]($style)'
+# [haskell]
+# symbol = ""
+# style = "bg:teal"
+# format = '[[ $symbol( $version) ](fg:color_fg0 bg:teal)]($style)'
 
 [python]
 symbol = ""
@@ -168,7 +164,7 @@ style = "bg:mantle"
 format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 
 [time]
-disabled = false
+disabled = true
 time_format = "%R"
 style = "bg:peach"
 format = '[[  $time ](fg:mantle bg:purple)]($style)'
@@ -178,8 +174,8 @@ disabled = false
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:green)'
-error_symbol = '[](bold fg:red)'
+success_symbol = '[ ](bold fg:green)'
+error_symbol = '[ ](bold fg:red)'
 vimcmd_symbol = '[](bold fg:creen)'
 vimcmd_replace_one_symbol = '[](bold fg:purple)'
 vimcmd_replace_symbol = '[](bold fg:purple)'

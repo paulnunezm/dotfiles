@@ -1,5 +1,6 @@
 syntax on
 
+let mapleader=" "
 set mouse=a
 set relativenumber number
 set shiftwidth=4 "Set the indent size to four spaces
@@ -20,3 +21,6 @@ vnoremap <CR>u U
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
+"Avoids yanking the selected woed when pasting over a selection
+"xnoremap p P
+vnoremap p "_dP

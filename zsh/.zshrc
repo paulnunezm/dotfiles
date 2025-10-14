@@ -1,12 +1,15 @@
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/Users/paulnunez/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/Users/paulnunez/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
-# Tokio night color theme for FZF 
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
---color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
---color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
---color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
---color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
-
+# # Tokio night color theme for FZF 
+# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+# --color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
+# --color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
+# --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
+# --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+#
 alias zshconfig="nvim ~/.zshrc"
 
 # default command remaps 
@@ -18,12 +21,18 @@ alias gw="./gradlew"
 alias dtkt="./gradlew detekt"
 alias dtktb="./gradlew detektBaseline"
 
+# Laravel alias
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+
+# git aliases 
+alias gitst="git status -sb"
+
 # git aliases with fzf 
 alias gitco="git branch \
   | fzf --height=15 --border='rounded' \
   | xargs git checkout"
 
-alias gitcor="git branch -a \
+alias gitcor="git pull && git branch -a \
   | grep 'remotes' \
   | sed 's/remotes\/origin\///' \
   | fzf --height=15 --border='rounded' \
@@ -36,8 +45,6 @@ alias gitbd="git branch \
 # ssh config
 eval $(ssh-agent)
 
-plugins=(git zsh-autosuggestions adb zsh-syntax-highlighting)
-
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Setup fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -47,3 +54,6 @@ eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
 
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(~/.local/bin/mise activate)"
+eval "$(mise activate zsh)"

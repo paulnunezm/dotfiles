@@ -1,5 +1,8 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
+#import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+#
+
+general.import = [
+    "/Users/paulnunez/.local/share/nvim/lazy/kanagawa.nvim/extras/alacritty/kanagawa_wave.toml",
 ]
 
 [env]
@@ -9,20 +12,28 @@ TERM = "xterm-256color"
 decorations = "Buttonless"
 
 [font]
-size = 18.0
+size = 22.0
 
 [font.bold]
-family = "UbuntuSansMono Nerd Font Mono"
+#family = "UbuntuSansMono Nerd Font Mono"
+#family = "GohuFont 14 Nerd Font"
+family = "Maple Mono NF"
 style = "SemiBold"
 
 [font.bold_italic]
-family = "UbuntuSansMono Nerd Font Mono"
+#family = "UbuntuSansMono Nerd Font Mono"
+# family = "GohuFont 14 Nerd Font"
+family = "Maple Mono NF"
 style = "SemiBoldItalic"
 
 [font.italic]
-family = "UbuntuSansMono Nerd Font Mono"
+#family = "UbuntuSansMono Nerd Font Mono"
+# family = "GohuFont 14 Nerd Font"
+family = "Maple Mono NF"
 style = "Italic"
 
 [font.normal]
-family = "UbuntuSansMono Nerd Font Mono"
+#family = "UbuntuSansMono Nerd Font Mono"
+# family = "GohuFont 14 Nerd Font"
+family = "Maple Mono NF"
 style = "Regular"

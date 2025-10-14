@@ -7,3 +7,10 @@ local opt = vim.opt
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.softtabstop = 4
+
+-- vim.diagnostic.config({
+--   -- virtual_lines = true,
+-- })
+--
+vim.diagnostic.config({ virtual_lines = { current_line = true } })
+-- vim.g.lazyvim_php_lsp = "intelephense"

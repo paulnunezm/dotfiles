@@ -1,14 +1,12 @@
 return {
-    { "ellisonleao/gruvbox.nvim" },
-    { "rose-pine/neovim", name = "rose-pine" },
-    { "rebelot/kanagawa.nvim" },
-    {
-        "folke/tokyonight.nvim",
+  { "ellisonleao/gruvbox.nvim" },
+  { "rose-pine/neovim", name = "rose-pine" },
+  { "rebelot/kanagawa.nvim" },
+  { -- Configure LazyVim to load the theme
+    "LazyVim/LazyVim",
+    opts = {
+      -- colorscheme = "tokyonight-night",
+      colorscheme = "kanagawa",
     },
-    { -- Configure LazyVim to load the theme
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "tokyonight-night",
-        },
-    },
+  },
 }
